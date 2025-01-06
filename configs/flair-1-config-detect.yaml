@@ -13,17 +13,16 @@ n_classes: 19
 
 model_weights: D:\NISI\github\FLAIR-1\configs\FLAIR-INC_rgbi_15cl_resnet34-unet_weights.pth  #e.g., FLAIR-INC_rgbie_15cl_resnet34-unet_weights.pth
 model_framework: 
-    model_provider: SegmentationModelsPytorch
+    model_provider: HuggingFace
+    
     HuggingFace:
-        org_model: 
+        org_model: openmmlab/upernet-swin-small
     SegmentationModelsPytorch:
         encoder_decoder: resnet34_unet
 
 
 batch_size: 4
 use_gpu: true
-model_name: 'unet'
-encoder_name: 'resnet34'
 num_worker: 0
 
 write_dataframe: False

@@ -1,8 +1,9 @@
-output_path:
-output_name:
+output_path: D:\LBST\2024\A2B\results\parcels
+output_name: 150957245_2.tif
 
-input_img_path: ../path/to/raster/file.tif
-channels: [1, 2, 3, 4, 5]
+
+input_img_path: D:\LBST\2024\A2B\input\parcels\150957245.tif
+channels: [1, 2, 3, 4]
 
 img_pixels_detection: 512
 margin: 128
@@ -10,7 +11,7 @@ output_type: "argmax"
 n_classes: 19
 
 
-model_weights: ../path/to/model/weights.pth  #e.g., FLAIR-INC_rgbie_15cl_resnet34-unet_weights.pth
+model_weights: D:\NISI\github\FLAIR-1\configs\FLAIR-INC_rgbi_15cl_resnet34-unet_weights.pth  #e.g., FLAIR-INC_rgbie_15cl_resnet34-unet_weights.pth
 model_framework: 
     model_provider: SegmentationModelsPytorch
     HuggingFace:
@@ -23,11 +24,11 @@ batch_size: 4
 use_gpu: true
 model_name: 'unet'
 encoder_name: 'resnet34'
-num_worker: 2
+num_worker: 0
 
 write_dataframe: False
 
 norma_task: 
   - norm_type: custom 
-    norm_means: [105.08, 110.87, 101.82, 106.38, 53.26]
-    norm_stds: [52.17, 45.38, 44, 39.69, 79.3]
+    norm_means: [105.08, 110.87, 101.82, 106.38]
+    norm_stds: [52.17, 45.38, 44, 39.69]
